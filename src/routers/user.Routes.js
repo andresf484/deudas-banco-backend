@@ -11,8 +11,8 @@ class UserRouter {
     #config() {
         const objUserC = new UserController();
 
-        this.router.get('/users', /*verifyToken,*/ objUserC.getAllUsers);
-        this.router.post('/users', /*verifyToken,*/ objUserC.createUser);
+        this.router.get('/users', verifyToken, objUserC.getAllUsers);
+        this.router.post('/users', verifyToken, objUserC.createUser);
     }
 
 }
